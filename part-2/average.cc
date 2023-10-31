@@ -6,10 +6,14 @@
 
 int main(int argc, char* argv[]) {
   std::vector<std::string> arguments{argv, argv + argc};
-
+  if (arguments.size() <= 1){
+    cout << "error: you must supply at least one number \n";
+    return 1;
+  }
   // TODO: Validate that there is at least one command line argument.
   // If not, print an error message and return a non-zero value.
-
+  bool zero{true};
+  double sum{0.0};
   // TODO: Write a for-each loop to sum (add up) all of the command line
   // arguments.
   // Use a double or float type so that your program preserves fractional
